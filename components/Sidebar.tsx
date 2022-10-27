@@ -13,8 +13,12 @@ import {
 
 function Sidebar() {
     return (
-        <div className="flex flex-col">
-            <img className="h-10 w-10" src={Twitter.src} alt="Twitter.png" />
+        <div className="flex flex-col col-span-2 items-center px-4 md:items-start">
+            <img
+                className="h-10 w-10 m-3"
+                src={Twitter.src}
+                alt="Twitter.png"
+            />
             <SidebarRow Icon={HomeIcon} title="Home" />
             <SidebarRow Icon={HashtagIcon} title="Explore" />
             <SidebarRow Icon={BellIcon} title="Notifications" />

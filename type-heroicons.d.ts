@@ -13,4 +13,5 @@ declare module "@heroicons/react/outline" {
     export { default as UserIcon } from "@heroicons/react/outline/UserIcon.js";
     export { default as DotsCircleHorizontalIcon } from "@heroicons/react/outline/DotsCircleHorizontalIcon.js";
     export { default as RefreshIcon } from "@heroicons/react/outline/RefreshIcon.js";
+    export { default as SearchIcon } from "@heroicons/react/outline/SearchIcon.js";
 }
