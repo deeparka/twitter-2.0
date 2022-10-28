@@ -5,9 +5,12 @@ import {
     CalendarIcon,
     LocationMarkerIcon,
 } from "@heroicons/react/outline";
+import { useState } from "react";
 import Face_Placeholder from "../images/face_placeholder.jpeg";
 
 function TweetBox() {
+    const [input, setInput] = useState<string>(``);
+
     return (
         <div className="flex space-x-2 p-5">
             <img
@@ -19,6 +22,8 @@ function TweetBox() {
             <div className="flex flex-1 items-center pl-2">
                 <form className="flex flex-1 flex-col">
                     <input
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
                         className="h-24 outline-none w-full text-xl placeholder:text-xl"
                         type="text"
                         placeholder="What's Happening?"
@@ -36,8 +41,9 @@ function TweetBox() {
                             <LocationMarkerIcon className="h-5 w-5" />
                         </div>
                         <button
+                            disabled={!input}
                             className="bg-twitter px-5 py-2 font-bold 
-                        text-white rounded-full"
+                        text-white rounded-full disabled:opacity-40"
                         >
                             Tweet
                         </button>
