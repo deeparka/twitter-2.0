@@ -3,7 +3,7 @@ import TweetBox from "./TweetBox";
 
 function Feed() {
     return (
-        <div className="col-span-7 lg:col-span-5">
+        <div className="col-span-8 border-x lg:col-span-5">
             <div className="flex items-center justify-between">
                 <h1 className="p-5 pb-0 text-xl font-bold">Home</h1>
                 <RefreshIcon
@@ -12,7 +12,9 @@ function Feed() {
                 />
             </div>
             {/* Tweet Box */}
-            <TweetBox />
+            <div>
+                <TweetBox />
+            </div>
         </div>
     );
 }

@@ -14,4 +14,9 @@ declare module "@heroicons/react/outline" {
     export { default as DotsCircleHorizontalIcon } from "@heroicons/react/outline/DotsCircleHorizontalIcon.js";
     export { default as RefreshIcon } from "@heroicons/react/outline/RefreshIcon.js";
     export { default as SearchIcon } from "@heroicons/react/outline/SearchIcon.js";
+    export { default as SearchCircleIcon } from "@heroicons/react/outline/SearchCircleIcon.js";
+    export { default as PhotographIcon } from "@heroicons/react/outline/PhotographIcon.js";
+    export { default as EmojiHappyIcon } from "@heroicons/react/outline/EmojiHappyIcon.js";
+    export { default as CalendarIcon } from "@heroicons/react/outline/CalendarIcon.js";
+    export { default as LocationMarkerIcon } from "@heroicons/react/outline/LocationMarkerIcon.js";
 }

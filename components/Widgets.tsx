@@ -3,7 +3,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 function Widgets() {
     return (
-        <div className="mt-2 px-2 col-span-2 hidden lg:inline">
+        <div className="mt-2 px-2 col-span-3 hidden lg:inline">
             {/* Search Box */}
             <div
                 className="mt-2 flex items-center space-x-2 bg-gray-100
