@@ -19,4 +19,8 @@ declare module "@heroicons/react/outline" {
     export { default as EmojiHappyIcon } from "@heroicons/react/outline/EmojiHappyIcon.js";
     export { default as CalendarIcon } from "@heroicons/react/outline/CalendarIcon.js";
     export { default as LocationMarkerIcon } from "@heroicons/react/outline/LocationMarkerIcon.js";
+    export { default as ChatAlt2Icon } from "@heroicons/react/outline/ChatAlt2Icon.js";
+    export { default as SwitchHorizontalIcon } from "@heroicons/react/outline/SwitchHorizontalIcon.js";
+    export { default as HeartIcon } from "@heroicons/react/outline/HeartIcon.js";
+    export { default as UploadIcon } from "@heroicons/react/outline/UploadIcon.js";
 }
