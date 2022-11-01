@@ -9,9 +9,7 @@ const feedQuery = groq`*[_type == "tweet" && !blockTweet]{
     ...
 } | order(_createdAt desc)`;
 
-type Data = {
-    tweet: Tweet[];
-};
+type Data = Tweet[];
 
 export default async function handler(
     req: NextApiRequest,
@@ -20,5 +18,5 @@ export default async function handler(
     const tweets: Tweet[] = await sanityClient.fetch(feedQuery);
     // console.log(tweets);
 
-    res.status(200).json({ tweets });
+    res.status(200).json(tweets);
 }
