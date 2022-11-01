@@ -7,15 +7,17 @@ import {
 } from "@heroicons/react/outline";
 import { useState } from "react";
 import Face_Placeholder from "../images/face_placeholder.jpeg";
+import { useSession } from "next-auth/react";
 
 function TweetBox() {
     const [input, setInput] = useState<string>(``);
+    const { data: session } = useSession();
 
     return (
         <div className="flex space-x-2 p-5">
             <img
                 className="h-14 w-14 rounded-full mt-4 object-cover"
-                src={Face_Placeholder.src}
+                src={session?.user?.image || Face_Placeholder.src}
                 alt=""
             />
 
@@ -41,7 +43,7 @@ function TweetBox() {
                             <LocationMarkerIcon className="h-5 w-5" />
                         </div>
                         <button
-                            disabled={!input}
+                            disabled={!input || !session}
                             className="bg-twitter px-5 py-2 font-bold 
                         text-white rounded-full disabled:opacity-40"
                         >
