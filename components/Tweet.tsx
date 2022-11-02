@@ -22,6 +22,7 @@ function Tweet({ tweet }: Props) {
     const { data: session } = useSession();
 
     const refreshComments = async () => {
+        // @ts-ignore
         const comments: Comment[] = await fetchComments(tweet._id);
         setComments(comments);
     };

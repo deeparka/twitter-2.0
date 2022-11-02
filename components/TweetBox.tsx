@@ -6,7 +6,6 @@ import {
     LocationMarkerIcon,
 } from "@heroicons/react/outline";
 import { Dispatch, SetStateAction, useRef, useState } from "react";
-import Face_Placeholder from "../images/face_placeholder.jpeg";
 import { useSession } from "next-auth/react";
 import { Tweet, TweetBody } from "../typings";
 import { fetchTweets } from "../lib/fetchTweets";
@@ -44,7 +43,8 @@ function TweetBox({ setTweets }: Props) {
         const tweetInfo: TweetBody = {
             text: input,
             username: session?.user?.name || "Unknown User",
-            profileImg: session?.user?.image || `${Face_Placeholder}`,
+            profileImg:
+                session?.user?.image || "https://links.papareact.com/gll",
             image: image,
         };
 
@@ -82,7 +82,7 @@ function TweetBox({ setTweets }: Props) {
         <div className="flex space-x-2 p-5">
             <img
                 className="h-14 w-14 rounded-full mt-4 object-cover"
-                src={session?.user?.image || Face_Placeholder.src}
+                src={session?.user?.image || "https://links.papareact.com/gll"}
                 alt=""
             />
 
