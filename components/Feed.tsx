@@ -12,7 +12,7 @@ interface Props {
 
 function Feed({ tweets: tweetsProp }: Props) {
     const [tweets, setTweets] = useState<Tweet[]>(tweetsProp);
-    console.log(tweets);
+    // console.log(tweets);
 
     const handleRefresh = async () => {
         const refreshToast = toast.loading("Refreshing...");
@@ -26,7 +26,7 @@ function Feed({ tweets: tweetsProp }: Props) {
     };
 
     return (
-        <div className="col-span-8 border-x lg:col-span-5">
+        <div className="col-span-8 border-x max-h-screen scrollbar-hide overflow-scroll lg:col-span-5">
             <div className="flex items-center justify-between">
                 <h1 className="p-5 pb-0 text-xl font-bold">Home</h1>
                 <RefreshIcon
@@ -37,7 +37,7 @@ function Feed({ tweets: tweetsProp }: Props) {
             </div>
             {/* Tweet Box */}
             <div>
-                <TweetBox />
+                <TweetBox setTweets={setTweets} />
             </div>
 
             {/* Feed */}
